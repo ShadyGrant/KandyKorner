@@ -6,6 +6,9 @@ import ProductList from "./products/ProductList"
 import { ProductProvider } from "./products/ProductProvider"
 import "./products/Product.css"
 import { ProductTypeProvider } from "./productTypes/ProductTypeProvider"
+import { EmployeeProvider } from "./employees/EmployeeProvider"
+import EmployeeList from "./employees/EmployeeList"
+import "./employees/Employee.css"
 
 export default () => (
     <>
@@ -22,5 +25,12 @@ export default () => (
                <ProductList />
            </ProductTypeProvider>
         </ProductProvider>
+
+        <h2>Employees</h2>
+        <EmployeeProvider>
+            <LocationProvider>
+                <EmployeeList />
+            </LocationProvider>
+        </EmployeeProvider>
     </>
 )
