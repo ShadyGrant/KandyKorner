@@ -5,6 +5,7 @@ import "./locations/Location.css"
 import ProductList from "./products/ProductList"
 import { ProductProvider } from "./products/ProductProvider"
 import "./products/Product.css"
+import { ProductTypeProvider } from "./productTypes/ProductTypeProvider"
 
 export default () => (
     <>
@@ -17,7 +18,9 @@ export default () => (
 
         <h2>Products</h2>
         <ProductProvider>
-            <ProductList />
+           <ProductTypeProvider>
+               <ProductList />
+           </ProductTypeProvider>
         </ProductProvider>
     </>
 )
